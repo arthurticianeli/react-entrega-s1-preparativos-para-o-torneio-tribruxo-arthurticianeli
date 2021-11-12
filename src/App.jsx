@@ -1,5 +1,5 @@
-import Students from "./components/Students";
-import Start from "./components/Start";
+import Students from "./pages/Students";
+import Start from "./pages/Start";
 import "./App.css";
 
 import { useState } from "react";

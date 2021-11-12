@@ -4,11 +4,11 @@ import LetterEffect from "../../components/LetterEffect";
 
 const StudentCard = ({ student, style, index }) => {
   const [passClass, setPassClass] = useState("portraitContainer");
-  const [showWinnerText, setShowWinnerText] = useState(false);
+  const [showWinnerText, setshowWinnerText] = useState(false);
 
   useEffect(() => {
     index === 1 && setPassClass("portraitContainer winner");
-    index === 1 && setShowWinnerText(true);
+    index === 1 && setshowWinnerText(true);
   }, [index]);
 
   const house = "House: " + student.house;
@@ -27,11 +27,9 @@ const StudentCard = ({ student, style, index }) => {
         <div className="name">
           <LetterEffect string={student.name} />
         </div>
-
         <div className="house">
           <LetterEffect string={house} />
         </div>
-
         <div className="ancestry">
           <LetterEffect string={ancestry} />
         </div>
@@ -39,5 +37,4 @@ const StudentCard = ({ student, style, index }) => {
     </div>
   );
 };
-
 export default StudentCard;
